@@ -9,7 +9,7 @@ This utility generates strong, secure passwords with user-defined criteria, leve
 - **Responsive**: Works well on both desktop and mobile browsers.
 
 ## Screenshot
-![Password Generator Screenshot](../Challange_3/screenshot.png)
+![Password Generator Screenshot](screenshot.png)
 
 ## Usage
 1. Access the live tool using the link above.
