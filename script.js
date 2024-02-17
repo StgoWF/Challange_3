@@ -40,7 +40,7 @@ function getPasswordOptions() {
 function writePassword() {
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
-  
+    console.log(password); // This should log the generated password string
     passwordText.value = password;
   
   } // This closing bracket ends the writePassword function
@@ -49,10 +49,14 @@ function writePassword() {
 // Define the generatePassword function
 function generatePassword() {
     var options = getPasswordOptions();
-    if (!options) return ''; // If no options, return an empty string
+    // Check if options is valid
+    if (!options) {
+      // If no options, perhaps because the user cancelled a prompt, return a default message or an empty string
+      return "No password generated.";
+    }
   
     var possibleCharacters = '';
-    
+    var password = '';
     if (options.hasSpecialCharacters) {
       possibleCharacters += specialCharacters;
     }
@@ -67,8 +71,13 @@ function generatePassword() {
     }
     
     // The logic to pick random characters from possibleCharacters will go here
-    
+    for (var i = 0; i < options.length; i++) {
+        var randomIndex = Math.floor(Math.random() * possibleCharacters.length);
+        password += possibleCharacters[randomIndex];
+      }
     return password; // This will return the generated password
+
+    
   }
   
   
