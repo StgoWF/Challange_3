@@ -37,10 +37,6 @@ function getPasswordOptions() {
     };
   }
   
-  
-  
-  
-  
 function writePassword() {
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
@@ -55,13 +51,26 @@ function generatePassword() {
     var options = getPasswordOptions();
     if (!options) return ''; // If no options, return an empty string
   
-    // Start with an empty password and add code to generate the password here
-    var password = '';
-    // Your password generation logic will go here using the options
+    var possibleCharacters = '';
     
-    return password; // Return the generated password
+    if (options.hasSpecialCharacters) {
+      possibleCharacters += specialCharacters;
+    }
+    if (options.hasNumericCharacters) {
+      possibleCharacters += numericCharacters;
+    }
+    if (options.hasLowerCasedCharacters) {
+      possibleCharacters += lowerCasedCharacters;
+    }
+    if (options.hasUpperCasedCharacters) {
+      possibleCharacters += upperCasedCharacters;
+    }
+    
+    // The logic to pick random characters from possibleCharacters will go here
+    
+    return password; // This will return the generated password
   }
-
+  
   
   // This event listener ensures the DOM is fully loaded before attaching the event listener to the button
 document.addEventListener('DOMContentLoaded', function () {
