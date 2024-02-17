@@ -12,7 +12,7 @@ This utility generates strong, secure passwords with user-defined criteria, leve
 ![Password Generator Screenshot](screenshot.png)
 
 ## Live Demo
-Experience the Password Generator [here](https://stgowf.github.io/Challange_3/).
+Experience the Password Generator [here](https://stgowf.github.io/JSPasswordGenerator/).
 
 ## Usage
 1. Access the live tool using the link above.
