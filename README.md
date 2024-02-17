@@ -11,6 +11,9 @@ This utility generates strong, secure passwords with user-defined criteria, leve
 ## Screenshot
 ![Password Generator Screenshot](screenshot.png)
 
+## Live Demo
+Experience the Password Generator [here](https://stgowf.github.io/Challange_3/).
+
 ## Usage
 1. Access the live tool using the link above.
 2. Press 'Generate Password' to start.
